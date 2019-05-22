@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Ogmo</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="hero">
+        <div class="title icon-bg"></div>
+        <div class="content">
+            <p>OGMO Editor is a free, open source, project oriented level editor made for indie game developers by indie game developers.</p>
+            <div>
+                <a href="#" class="btn border">Get Started</a>
+                <a href="#" class="btn gradient">Download</a>
+            </div>
+        </div>
+    </div>
+    <canvas id="webgl"></canvas>
+    <div id="navbar" class="shadow">
+        <p style="margin: auto 0;">LOGO</p>
+        <div>
+            <a href="#" class="btn">Manual</a>
+            <a href="#" class="btn gradient">Download</a>
+        </div>
+    </div>
+    <main>
+        <section class="feature">
+            <div>
+                <h1>Feature Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
+            </div>
+        </section>
+        <section class="feature">
+            <div>
+                <h1>Feature Title</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
+            </div>
+        </section>
+        <!-- <section class="games">
+            <h1>Games created using OGMO Editor</h1>
+            <div>
+            <div class="game">
+                <div class="cover"></div>
+                <p>Game Title</p>
+            </div>
+            <div class="game">
+                <div class="cover"></div>
+                <p>Game Title</p>
+            </div>
+            <div class="game">
+                <div class="cover"></div>
+                <p>Game Title</p>
+            </div>
+            </div>
+        </section> -->
+        <section class="cta">
+            <div class="download gradient">
+                <h1>Download OGMO Editor</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
+                <a href="#" class="btn border">Download at itch.io</a>
+                <p>icons</p>
+                <a href="#" style="text-align:center;">Source available on GitHub</a>
+            </div>
+            <div class="manual icon-bg">
+                <div class="content">
+                    <p>icon</p>
+                    <h1>Online Manual</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
+                    <a href="#" class="btn gradient">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>OGMO Editor created by Matt Thorson</p>
+        <p>icons go here</p>
+    </footer>
+</body>
+<script type="text/javascript" src="bin/app.js"></script>
+<script>
+    // Resize the canvas on window resize
+    var canvas = document.getElementById('webgl');
+    canvas.style.width = '100%';
+    canvas.style.height = '90%';
+    window.addEventListener('resize', () => canvas.style.width = '100%', false);
+</script>
+</html>
