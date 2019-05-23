@@ -29,19 +29,23 @@ canvas#webgl {
 
 article {
   background-color: #ffffff;
-  max-width: 960px;
-  padding: 32px 64px;
+  max-width: 800px;
+  padding: 80px;
   line-height: 1.5em;
 }
 
 article h1 {
   font-size: 24px;
-  margin: 32px 0;
+  margin: 0 0 32px 0;
 }
 
 article h2 {
   font-size: 20px;
   margin: 32px 0;
+}
+
+article h2 a {
+  text-decoration: none;
 }
 
 footer {
@@ -361,4 +365,19 @@ section.cta .manual > .content {
 
 .sticky {
   padding-top: 60px;
+}
+
+.article-container {
+  padding-bottom: 156px;
+}
+
+@media screen and (max-width: 649px) {
+  .article-container {
+    padding-bottom: 0;
+  }
+}
+
+code {
+  background-color: #eee;
+  font-size: 0.8em;
 }
