@@ -8,18 +8,20 @@
 </head>
 <body>
     <div id="hero">
-        <div class="title icon-bg"></div>
+        <div class="title icon-bg">
+            <img src="img/logo-big.png" />
+        </div>
         <div class="content">
             <p>OGMO Editor is a free, open source, project oriented level editor made for indie game developers by indie game developers.</p>
             <div>
-                <a href="#" class="btn border">Get Started</a>
+                <a href="#" class="btn border" onclick="scrollToContent()">Get Started</a>
                 <a href="#" class="btn gradient">Download</a>
             </div>
         </div>
     </div>
     <canvas id="webgl"></canvas>
     <div id="navbar" class="shadow">
-        <p style="margin: auto 0;">LOGO</p>
+        <img src="img/logo-navbar.png" />
         <div>
             <a href="#" class="btn">Manual</a>
             <a href="#" class="btn gradient">Download</a>
@@ -60,12 +62,12 @@
                 <h1>Download OGMO Editor</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
                 <a href="#" class="btn border">Download at itch.io</a>
-                <p>icons</p>
+                <img style="margin: 16px 0" src="img/targets.png" />
                 <a href="#" style="text-align:center;">Source available on GitHub</a>
             </div>
             <div class="manual icon-bg">
                 <div class="content">
-                    <p>icon</p>
+                    <img src="img/icon-book.png" />
                     <h1>Online Manual</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
                     <a href="#" class="btn gradient">Learn More</a>
@@ -83,7 +85,25 @@
     // Resize the canvas on window resize
     var canvas = document.getElementById('webgl');
     canvas.style.width = '100%';
-    canvas.style.height = '90%';
+    canvas.style.height = '100%';
     window.addEventListener('resize', () => canvas.style.width = '100%', false);
+
+    // Show navbar on scroll
+    window.onscroll = () => scrollCheck();
+    function scrollCheck()
+    {
+        document.body.scrollTop > window.innerHeight - 64 ? document.getElementById("navbar").className = "shadow shownav" : document.getElementById("navbar").className = "shadow";
+    }
+
+    function scrollToContent()
+    {
+        setTimeout(function () {
+            if (document.documentElement.scrollIntoView) window.scrollTo({
+                top: window.innerHeight,
+                behavior: "smooth"
+            });
+            else window.scrollTo(0, window.innerHeight);
+        },2);
+    }
 </script>
 </html>

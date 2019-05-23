@@ -72,6 +72,13 @@ a {
 
 #hero > .title {
   height: 283px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero > .title img {
+  max-width: 400px;
 }
 
 #hero > .content {
@@ -82,7 +89,7 @@ a {
 }
 
 #hero > .content > p {
-  width: 60%;
+  width: 70%;
 }
 
 #hero > .content > div {
@@ -90,11 +97,17 @@ a {
   justify-content: center;
 }
 
+#hero .btn {
+  margin: 16px 10px;
+  padding: 12px 32px;
+}
+
 @media screen and (min-width: 650px) {
   #hero {
     width: 600px;
+    height: 566px;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
     right: 5%;
   }
 }
@@ -107,11 +120,13 @@ a {
   justify-content: space-between;
   background-color: #ffffff;
   padding: 12px;
-  z-index: 1;
+  z-index: 999;
   position: fixed;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
+  transition-duration: 500ms;
+  align-content: center;
 }
 
 #navbar > div {
@@ -119,6 +134,23 @@ a {
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+}
+
+#navbar img {
+  width: 240px;
+  height: 24px;
+  margin: 16px 16px;
+}
+
+.shownav {
+  top: 0 !important;
+  transition-duration: 500ms;
+}
+
+@media screen and (max-width: 649px) {
+  #navbar {
+    display: none !important;
+  }
 }
 
 /* feature component */
@@ -231,6 +263,7 @@ section.cta .manual > .content {
 
 .icon-bg {
   background-color: #eee;
+  background-image: url('img/icons-bg.png');
 }
 
 .border {

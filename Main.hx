@@ -25,8 +25,8 @@ class Main extends hxd.App {
 
   var transitioning:Bool;
   var transitionTimer:Float;
-  var transitionDelay:Float = 0.05;
-  var transitionSteps:Int = 7;
+  var transitionDelay:Float = 0.01;
+  var transitionSteps:Int = 1;
   var transitionStepTimer:Float = 0.2;
 
   override function init() {
@@ -90,7 +90,7 @@ class Main extends hxd.App {
           if (tileData[i].index > -1) tileData[i].lastIndex = tileData[i].index;
           tileData[i].x = x * tileWidth;
           tileData[i].y = y * tileHeight;
-          tileData[i].delay = (y + x) * transitionDelay;
+          tileData[i].delay = (y + x) * (transitionDelay + Math.random() * 0.01);
           tileData[i].timer = transitionStepTimer;
           tileData[i].step = transitionSteps;
           tileData[i].index = data[y][x];
@@ -98,7 +98,7 @@ class Main extends hxd.App {
         else tileData[i] = {
           x: x * tileWidth,
           y: y * tileHeight,
-          delay: (y + x) * transitionDelay,
+          delay: (y + x) * (transitionDelay + Math.random() * 0.01),
           timer: transitionStepTimer,
           step: transitionSteps,
           index: data[y][x]
@@ -142,7 +142,7 @@ class Main extends hxd.App {
   }
 
   function drawGrid(level:Level) {
-    grid.clear();
+    /*grid.clear();
     grid.lineStyle(gridLineWidth, gridLineColor, gridLineAlpha);
 
     var layer = level.layers[0];
@@ -153,7 +153,7 @@ class Main extends hxd.App {
     for(x in 1...Std.int(level.width / layer.gridCellWidth)) {
       grid.moveTo(x * layer.gridCellWidth, 0);
       grid.lineTo(x * layer.gridCellWidth, level.height);
-    }
+    }*/
   }
 
   static function main() {
