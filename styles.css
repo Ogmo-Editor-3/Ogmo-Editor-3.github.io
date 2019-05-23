@@ -11,6 +11,7 @@ canvas#webgl {
   width:100%;
   position: relative;
   z-index: 10;
+  margin-bottom: 128px;
 }
 
 main {
