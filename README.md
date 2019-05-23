@@ -1,6 +1,4 @@
-#ogmo-site
-
-This is the source for Ogmo Editor 3's website.
+# ogmo-site
 
 ## Getting Started
 
