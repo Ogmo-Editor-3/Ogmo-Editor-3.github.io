@@ -103,6 +103,14 @@ a {
   padding: 12px 32px;
 }
 
+#version {
+  position: absolute;
+  top: 485px;
+  right: 180px;
+  font-size: 12px;
+  color: #e61c39;
+}
+
 @media screen and (min-width: 650px) {
   #hero {
     width: 600px;
@@ -110,6 +118,12 @@ a {
     position: absolute;
     bottom: 0;
     right: 5%;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  #version {
+    display: none;
   }
 }
 
