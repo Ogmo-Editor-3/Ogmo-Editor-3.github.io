@@ -17,13 +17,13 @@
         <div class="content">
             <p>OGMO Editor is a free, open source, project oriented level editor made for indie game developers by indie game developers.</p>
             <div>
-                <a href="#" class="btn border" onclick="scrollToContent()">Get Started</a>
-                <a href="#" class="btn gradient">Download<span id="version">v3.0</span></a>
+                <a href="#" class="btn border hide-mobile" onclick="scrollToContent()">Get Started</a>
+                <a href="#" class="btn gradient">Download<span id="version" class="hide-mobile">v3.0</span></a>
             </div>
         </div>
     </div>
     <canvas id="webgl"></canvas>
-    <nav id="navbar" class="shadow">
+    <nav id="navbar" class="shadow hide-mobile">
         <img src="img/logo-navbar.png" />
         <div>
             <a href="#" class="btn">Manual</a>
@@ -101,7 +101,7 @@
     window.onscroll = () => scrollCheck();
     function scrollCheck()
     {
-        document.body.scrollTop > window.innerHeight - 64 ? document.getElementById("navbar").className = "shadow shownav" : document.getElementById("navbar").className = "shadow";
+        document.body.scrollTop > window.innerHeight - 64 ? document.getElementById("navbar").className = "shadow shownav hide-mobile" : document.getElementById("navbar").className = "shadow hide-mobile";
     }
 
     function scrollToContent()

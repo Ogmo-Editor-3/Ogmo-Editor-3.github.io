@@ -82,6 +82,12 @@ a {
   max-width: 400px;
 }
 
+@media screen and (max-width: 649px) {
+  #hero > .title img {
+    width: 75%;
+  }
+}
+
 #hero > .content {
   display: flex;
   flex-direction: column;
@@ -121,12 +127,6 @@ a {
   }
 }
 
-@media screen and (max-width: 649px) {
-  #version {
-    display: none;
-  }
-}
-
 /* navbar component */
 
 #navbar {
@@ -160,12 +160,6 @@ a {
 .shownav {
   top: 0 !important;
   transition-duration: 500ms;
-}
-
-@media screen and (max-width: 649px) {
-  #navbar {
-    display: none !important;
-  }
 }
 
 /* feature component */
@@ -254,6 +248,12 @@ section.cta .manual > .content {
   section.cta > div {
     width: 352px;
     padding: 32px 64px;
+  }
+}
+
+@media screen and (max-width: 649px) {
+  .hide-mobile {
+    display: none !important;
   }
 }
 
