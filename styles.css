@@ -13,6 +13,26 @@ canvas#webgl {
   z-index: 10;
 }
 
+nav {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 12px;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
 main {
   max-width: 960px;
   margin: auto;
@@ -97,28 +117,6 @@ a {
     bottom: 10%;
     right: 5%;
   }
-}
-
-/* navbar component */
-
-#navbar {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  background-color: #ffffff;
-  padding: 12px;
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#navbar > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
 }
 
 /* feature component */
