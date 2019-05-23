@@ -11,7 +11,7 @@ canvas#webgl {
   width:100%;
   position: relative;
   z-index: 10;
-  margin-bottom: 128px;
+  margin-bottom: 80px;
 }
 
 #home main {
@@ -31,6 +31,17 @@ article {
   background-color: #ffffff;
   max-width: 960px;
   padding: 32px 64px;
+  line-height: 1.5em;
+}
+
+article h1 {
+  font-size: 24px;
+  margin: 32px 0;
+}
+
+article h2 {
+  font-size: 20px;
+  margin: 32px 0;
 }
 
 footer {
@@ -294,6 +305,7 @@ section.cta .manual > .content {
 
 .sidenav ol {
   padding-inline-start: 15px;
+  margin: 8px 0;
 }
 
 .sidenav li {
