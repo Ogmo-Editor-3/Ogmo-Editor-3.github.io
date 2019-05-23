@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="home">
     <div id="hero">
         <div class="title icon-bg">
             <img src="img/logo-big.png" />
@@ -24,9 +24,9 @@
     </div>
     <canvas id="webgl"></canvas>
     <nav id="navbar" class="shadow hide-mobile">
-        <img src="img/logo-navbar.png" />
+        <a href="index.html"><img src="img/logo-navbar.png" /></a>
         <div>
-            <a href="#" class="btn">Manual</a>
+            <a href="docs/index.html" class="btn">Manual</a>
             <a href="#" class="btn gradient">Download</a>
         </div>
     </nav>
@@ -79,7 +79,7 @@
                     <img src="img/icon-book.png" />
                     <h1>Online Manual</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet, tortor quis suscipit sagittis, ante eros eleifend turpis, a cursus nulla mi quis nulla. Aliquam erat volutpat. Cras eu ex et nisi sagittis lacinia in at velit. Sed eu pretium neque.</p>
-                    <a href="#" class="btn gradient">Learn More</a>
+                    <a href="docs/index.html" class="btn gradient">Learn More</a>
                 </div>
             </div>
         </section>
@@ -90,6 +90,7 @@
     </footer>
 </body>
 <script type="text/javascript" src="bin/app.js"></script>
+<script type="text/javascript" src="scripts/smoothscroll.min.js"></script>
 <script>
     // Resize the canvas on window resize
     var canvas = document.getElementById('webgl');

@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogmo Editor Manual">
+    <meta name="keywords" content="Ogmo,Editor,Indie,gamedev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogmo Manual</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="manual">
+    <div class="sidenav">
+        <a href="../index.html"><img src="../img/logo-navbar.png" /></a>
+        <ol id="nav">
+            <li>
+                <span>Manual</span>
+                <ol>
+                    <li><a href="#/manual/introduction.md">Introduction</a></li>
+                    <li>
+                        <a href="#/manual/getting_started.md">Getting Started</a>
+                        <ol>
+                            <li><a href="#" class="sub-section">Starting a New Project</a></li>
+                            <li><a href="#" class="sub-section">Saving Levels</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#">Tile Layers</a></li>
+                    <li><a href="#">Grid Layers</a></li>
+                    <li><a href="#">Entity Layers</a></li>
+                    <li><a href="#">Decal Layers</a></li>
+                </ol>
+            </li>
+            <li>
+                <span>Reference</span>
+                <ol>
+                    <li><a href="#">Building from Source</a></li>
+                    <li><a href="#">Contributing</a></li>
+                    <li><a href="#">JSON Level Schema</a></li>
+                    <li><a href="#">JSON Project Schema</a></li>
+                </ol>
+            </li>
+            <li>
+                <span>Attributions</span>
+            </li>
+        </ol>
+    </div>
+    <main class="icon-bg">
+        <article id="content"></article>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/unfetch/dist/unfetch.umd.js"></script>
+<script>
+    if (!window.Promise) {
+        window.Promise = ES6Promise;
+    }
+    if (!window.fetch) {
+        window.fetch = unfetch;
+    }
+    var content = document.querySelector('#content');
+    var body = document.querySelector('html');
+    var navLinks = document.querySelectorAll('#nav a');
+    var currentPage = 'manual/introduction.md';
+    var currentHash = '';
+    var renderedPage = '';
+
+    function hashChange() {
+        var hash = location.hash.slice(1);
+        if (!hash) {
+            hash = 'manual/introduction.md';
+        }
+        var uri = hash.split('#');
+        if (uri[0].match(/^\//)) {
+            currentPage = uri[0].slice(1);
+            if (uri.length > 1) {
+                currentHash = uri[1];
+            } else {
+                currentHash = '';
+            }
+        } else {
+            currentHash = uri[0];
+        }
+        fetchPage(currentPage).then(function () {
+            fetchAnchor(currentHash)
+        });
+        var url = '#/' + currentPage + (currentHash ? '#' + currentHash : '');
+        var fullUrl = window.location.origin + '/' + url;
+        navLinks.forEach(function(link) {
+            link.className = link.href === fullUrl ? 'selected' : '';
+        });
+        history.replaceState('', document.title, url);
+    }
+    function fetchAnchor(anchor) {
+        if (!anchor) {
+            return;
+        }
+        var hashElement = document.getElementById(anchor);
+        if (hashElement) {
+            hashElement.scrollIntoView();
+        }
+    }
+    function fetchPage(page) {
+        if (page === renderedPage) {
+            return Promise.resolve();
+        }
+        return fetch(page)
+            .then(function (res) {
+                if (!res.ok) {
+                    throw new Error('Error ' + res.status + ': ' + res.statusText);
+                }
+                return res.text();
+            })
+            .then(function (text) {
+                renderedPage = page;
+                content.innerHTML = marked(text);
+                body.scrollTop = 0;
+            }).catch(function (e) {
+                content.innerHTML = '<p>Oops! There was a problem rendering the page.</p>'
+                    + '<p>' + e.message + '</p>';
+            });
+    }
+    window.addEventListener('hashchange', function (e) {
+        e.preventDefault();
+        hashChange();
+    });
+    hashChange();
+</script>
+</html>

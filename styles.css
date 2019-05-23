@@ -14,11 +14,23 @@ canvas#webgl {
   margin-bottom: 128px;
 }
 
-main {
+#home main {
   max-width: 960px;
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+
+#manual main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+article {
+  background-color: #ffffff;
+  max-width: 960px;
+  padding: 32px 64px;
 }
 
 footer {
@@ -27,11 +39,6 @@ footer {
   padding: 16px 48px;
   color: #ffffff;
   background-color: #282c34;
-}
-
-h1 {
-  font-size: 18px;
-  font-weight: bold;
 }
 
 a {
@@ -44,16 +51,23 @@ a {
     font-size: 20px;
   }
 
+  body#manual {
+    margin-left: 320px;
+    display: flex;
+    flex: 0;
+  }
+
   canvas#webgl {
     display: block;
   }
 
-  section {
+  #home section {
     margin-top: 100px;
   }
 
-  h1 {
-    font-size: 30px;
+  article {
+    box-shadow: 10px 10px 40px 0 rgba(46, 52, 92, 0.25);
+    margin: 5% 5% auto;
   }
 
   footer {
@@ -254,6 +268,54 @@ section.cta .manual > .content {
 @media screen and (max-width: 649px) {
   .hide-mobile {
     display: none !important;
+  }
+}
+
+/* side nav */
+
+.sidenav {
+  flex: 0 0 auto;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidenav ol {
+  padding-inline-start: 15px;
+}
+
+.sidenav li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.sidenav li a {
+  text-decoration: none;
+}
+
+.sidenav span {
+  font-size: 18px;
+}
+
+.sidenav .sub-section {
+  font-weight: normal;
+}
+
+@media screen and (min-width: 650px) {
+  .sidenav {
+    width: 320px;
   }
 }
 
