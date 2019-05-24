@@ -126,11 +126,9 @@
 	{
 		var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 		var target_site = 'https://rvagamejams.itch.io';
-		var x = new XMLHttpRequest();
-		x.responseType = 'document';
-		x.open('GET', cors_api_url + target_site);
-		x.onload = (data) => parseResponse(data.target.response);
-		x.send();
+		fetch(cors_api_url + target_site, {mode: 'cors'})
+			.then(res => res.text())
+			.then(html => parseResponse(new DOMParser().parseFromString(html, "text/html")));
 	}
 
 	function parseResponse(response)
