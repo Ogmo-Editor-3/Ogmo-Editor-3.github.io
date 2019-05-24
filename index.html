@@ -49,23 +49,14 @@
 				<p>When you're done editing, save your level to a handy JSON file - one that is easily parsed to give you immediate access to all of the tiles, decals, and entities you've authored!</p>
 			</div>
 		</section>
-		<!-- <section class="games">
+		<section class="games hidden">
 			<h1>Games created using OGMO Editor</h1>
 			<div>
-			<div class="game">
-				<div class="cover"></div>
-				<p>Game Title</p>
+				<div class="game"><div class="cover"></div><a><p class="title"></p></a><p class="author"></p></div>
+				<div class="game"><div class="cover"></div><a><p class="title"></p></a><p class="author"></p></div>
+				<div class="game"><div class="cover"></div><a><p class="title"></p></a><p class="author"></p></div>
 			</div>
-			<div class="game">
-				<div class="cover"></div>
-				<p>Game Title</p>
-			</div>
-			<div class="game">
-				<div class="cover"></div>
-				<p>Game Title</p>
-			</div>
-			</div>
-		</section> -->
+		</section>
 		<section class="cta">
 			<div class="download gradient">
 				<h1>Download OGMO Editor</h1>
@@ -122,5 +113,78 @@
 			else window.scrollTo(0, window.innerHeight);
 		},2);
 	}
+
+	// Scrape itch.io
+
+	var restricted_projects = [
+		'Hammstein',
+		'Meow Moves',
+		'Foos Fight'
+	]
+
+	function getGames()
+	{
+		var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+		var target_site = 'https://rvagamejams.itch.io';
+		var x = new XMLHttpRequest();
+		x.responseType = 'document';
+		x.open('GET', cors_api_url + target_site);
+		x.onload = (data) => parseResponse(data.target.response);
+		x.send();
+	}
+
+	function parseResponse(response)
+	{
+		var game_list = response.getElementsByClassName('has_cover');
+		if (game_list.length < 3) return;
+		var games_data = [];
+		for (let i = 0; i < game_list.length; i++) {
+			var game = {
+				title: game_list[i].getElementsByClassName('title')[0].innerHTML,
+				author: game_list[i].getElementsByClassName('game_author')[0].innerHTML,
+				image: game_list[i].getElementsByClassName('game_thumb')[0].attributes['data-background_image'].value,
+				href: game_list[i].getElementsByTagName('a')[0].attributes['href'].value
+			};
+			if (restricted_projects.indexOf(game.title) == -1) games_data.push(game);
+			//else console.log(game.title, 'not added');
+		}
+		shuffle(games_data);
+		injectGames(games_data);
+	}
+
+	function injectGames(games_data)
+	{
+		document.getElementsByClassName('games')[0].className = 'games';
+		var game_divs = document.getElementsByClassName('game');
+		for (let i = 0; i < 3; i++)
+		{
+			var div = game_divs[i];
+			div.getElementsByClassName('cover')[0].style.backgroundImage = "url('" + games_data[i].image + "')";
+			div.getElementsByClassName('cover')[0].onclick = () => window.location.href = games_data[i].href;
+			div.getElementsByClassName('title')[0].innerHTML = games_data[i].title;
+			div.getElementsByClassName('author')[0].innerHTML = games_data[i].author;
+			div.getElementsByTagName('a')[0].setAttribute('href', games_data[i].href);
+		}
+	}
+
+	function shuffle(arr)
+	{
+		var currentIndex = arr.length;
+		var temporaryValue, randomIndex;
+	
+		while (0 !== currentIndex)
+		{
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+	
+			temporaryValue = arr[currentIndex];
+			arr[currentIndex] = arr[randomIndex];
+			arr[randomIndex] = temporaryValue;
+		}
+	
+		return arr;
+	}
+
+	getGames();
 </script>
 </html>

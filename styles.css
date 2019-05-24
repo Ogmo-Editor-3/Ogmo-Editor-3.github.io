@@ -235,9 +235,27 @@ section.feature > div {
 
 /* game component */
 
+.hidden {
+  display: none;
+}
+
 section.games {
+  width: 100%;
+}
+
+section.games a {
+  text-decoration: none;
+}
+
+section.games .title {
+  font-size: 0.8em;
   font-weight: bold;
-  padding: 0 64px;
+  margin-bottom: 4px;
+}
+
+section.games .author {
+  font-size: 0.6em;
+  margin-top: 0;
 }
 
 section.games > div {
@@ -249,8 +267,20 @@ section.games > div {
 section.games .game > div {
   width: 300px;
   height: 240px;
-  border: solid 1px #979797;
   background-color: #d8d8d8;
+}
+
+section.games .game .cover {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.game {
+  max-width: 300px;
 }
 
 /* call-to-action component */
