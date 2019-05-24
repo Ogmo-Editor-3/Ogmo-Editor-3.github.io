@@ -152,9 +152,12 @@ a {
 #version {
   position: absolute;
   top: 485px;
-  right: 180px;
-  font-size: 12px;
+  right: 100px;
+  font-size: 14px;
   color: #e61c39;
+  width: 180px;
+  text-align: center;
+  text-transform: none;
 }
 
 @media screen and (min-width: 960px) {
