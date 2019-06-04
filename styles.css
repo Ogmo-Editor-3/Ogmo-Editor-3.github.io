@@ -29,14 +29,14 @@ canvas#webgl {
 
 article {
   background-color: #ffffff;
-  max-width: 960px;
-  padding: 32px 64px;
+  max-width: 800px;
+  padding: 80px;
   line-height: 1.5em;
 }
 
 article h1 {
   font-size: 24px;
-  margin: 32px 0;
+  margin: 0 0 32px 0;
 }
 
 article h2 {
@@ -44,19 +44,34 @@ article h2 {
   margin: 32px 0;
 }
 
+article h2 a {
+  text-decoration: none;
+}
+
 footer {
+  height: 120px;
   display: flex;
   justify-content: space-between;
-  padding: 16px 48px;
+  align-items: center;
+  padding: 0 80px;
   color: #ffffff;
   background-color: #282c34;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer img {
+  width: 48px;
+  margin: 0 12px;
 }
 
 a {
   color: unset;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 960px) {
 
   body {
     font-size: 20px;
@@ -107,7 +122,7 @@ a {
   max-width: 400px;
 }
 
-@media screen and (max-width: 649px) {
+@media screen and (max-width: 959px) {
   #hero > .title img {
     width: 75%;
   }
@@ -137,12 +152,15 @@ a {
 #version {
   position: absolute;
   top: 485px;
-  right: 180px;
-  font-size: 12px;
+  right: 100px;
+  font-size: 14px;
   color: #e61c39;
+  width: 180px;
+  text-align: center;
+  text-transform: none;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 960px) {
   #hero {
     width: 600px;
     height: 566px;
@@ -208,7 +226,7 @@ section.feature > div {
   padding: 0 32px;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 960px) {
   section.feature > div {
     width: 600px;
     padding: 32px 64px;
@@ -217,9 +235,27 @@ section.feature > div {
 
 /* game component */
 
+.hidden {
+  display: none;
+}
+
 section.games {
+  width: 100%;
+}
+
+section.games a {
+  text-decoration: none;
+}
+
+section.games .title {
+  font-size: 0.8em;
   font-weight: bold;
-  padding: 0 64px;
+  margin-bottom: 4px;
+}
+
+section.games .author {
+  font-size: 0.6em;
+  margin-top: 0;
 }
 
 section.games > div {
@@ -231,8 +267,20 @@ section.games > div {
 section.games .game > div {
   width: 300px;
   height: 240px;
-  border: solid 1px #979797;
   background-color: #d8d8d8;
+}
+
+section.games .game .cover {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.game {
+  max-width: 300px;
 }
 
 /* call-to-action component */
@@ -269,14 +317,14 @@ section.cta .manual > .content {
   padding: 32px;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 960px) {
   section.cta > div {
     width: 352px;
     padding: 32px 64px;
   }
 }
 
-@media screen and (max-width: 649px) {
+@media screen and (max-width: 959px) {
   .hide-mobile {
     display: none !important;
   }
@@ -325,7 +373,7 @@ section.cta .manual > .content {
   font-weight: normal;
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 960px) {
   .sidenav {
     width: 320px;
   }
@@ -361,4 +409,19 @@ section.cta .manual > .content {
 
 .sticky {
   padding-top: 60px;
+}
+
+.article-container {
+  padding-bottom: 156px;
+}
+
+@media screen and (max-width: 959px) {
+  .article-container {
+    padding-bottom: 0;
+  }
+}
+
+code {
+  background-color: #eee;
+  font-size: 0.8em;
 }
