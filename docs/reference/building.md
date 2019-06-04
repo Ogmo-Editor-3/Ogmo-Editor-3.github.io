@@ -4,7 +4,6 @@ This project requires Haxe, Node v10+, and various dependencies for each of them
 
 ## [Preparing Node](#preparing-node)
 * Install [Node](https://nodejs.org/)
-* Install [Node-Gyp](https://github.com/nodejs/node-gyp#installation)
 
 ## [Preparing Haxe](#preparing-haxe)
 * Install [Haxe](https://haxe.org/download/)
