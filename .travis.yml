@@ -13,10 +13,10 @@ install:
 
 script:
  - haxe build.hxml
+ - bash ./remove_gitignore.sh
 
 deploy:
  - provider: pages
-   script: bash ./remove_gitignore.sh
    skip-cleanup: true
    github-token: $GITHUB_TOKEN
    on:
