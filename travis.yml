@@ -1,0 +1,21 @@
+sudo: required
+dist: trusty
+
+language: haxe
+
+haxe:
+ - "4.0.0-rc.2"
+
+install:
+ - haxelib git heaps https://github.com/HeapsIO/heaps.git
+
+script:
+ - haxe build.hxml
+
+deploy:
+ - provider: pages
+   local-dir: bin
+   skip-cleanup: true
+   github-token: $GITHUB_TOKEN
+   on:
+    tags: true
