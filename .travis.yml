@@ -7,7 +7,9 @@ haxe:
  - "4.0.0-rc.2"
 
 install:
+ - haxelib install json2object
  - haxelib git heaps https://github.com/HeapsIO/heaps.git
+ - haxelib dev ogmo ./ogmo
 
 script:
  - haxe build.hxml
@@ -18,4 +20,4 @@ deploy:
    skip-cleanup: true
    github-token: $GITHUB_TOKEN
    on:
-    tags: true
+    branch: master
