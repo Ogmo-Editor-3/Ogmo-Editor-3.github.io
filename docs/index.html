@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body id="manual">
-    <div class="sidenav">
+    <div id="sidenav" class="shadow">
+        <img id="close" src="../img/icons-cross.png" />
         <a href="../index.html"><img src="../img/logo-navbar.png" /></a>
         <ol id="nav" style="margin-top:64px">
             <li>
@@ -63,7 +64,9 @@
             </li>
         </ol>
     </div>
-    <main class="icon-bg article-container">
+    <div id="sidenav-spacer"></div>
+    <img id="open" src="../img/icons-hamburger.png" />
+    <main class="icon-bg">
         <article id="content"></article>
     </main>
 </body>
@@ -71,6 +74,7 @@
 <script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/unfetch/dist/unfetch.umd.js"></script>
 <script>
+    // marked TOC
     if (!window.Promise) {
         window.Promise = ES6Promise;
     }
@@ -144,5 +148,29 @@
         hashChange();
     });
     hashChange();
+
+    // sidenav toggles
+    var open = document.getElementById('open');
+    var close = document.getElementById('close');
+    var sidenav = document.getElementById('sidenav');
+    var spacer = document.getElementById('sidenav-spacer');
+
+    open.onclick = () => 
+    {
+        sidenav.classList.remove('hide-sidebar');
+        spacer.classList.remove('hide-sidebar');
+    };
+    
+    close.onclick = () => 
+    {
+        sidenav.classList.add('hide-sidebar');
+        spacer.classList.add('hide-sidebar');
+    };
+
+    if (window.innerWidth < 960)
+    {
+        sidenav.classList.add('hide-sidebar');
+        spacer.classList.add('hide-sidebar');
+    }
 </script>
 </html>

@@ -78,7 +78,6 @@ a {
   }
 
   body#manual {
-    margin-left: 320px;
     display: flex;
     flex: 0;
   }
@@ -93,7 +92,7 @@ a {
 
   article {
     box-shadow: 10px 10px 40px 0 rgba(46, 52, 92, 0.25);
-    margin: 5% 5% auto;
+    margin: 5% 5%;
   }
 
   footer {
@@ -332,17 +331,16 @@ section.cta .manual > .content {
 
 /* side nav */
 
-.sidenav {
+#sidenav {
   flex: 0 0 auto;
   height: 100%;
-  width: 0;
+  width: 320px;
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
   background-color: #ffffff;
   overflow-x: hidden;
-  padding-top: 60px;
   transition: 0.5s;
   display: flex;
   flex-direction: column;
@@ -351,30 +349,57 @@ section.cta .manual > .content {
   font-weight: bold;
 }
 
-.sidenav ol {
+#sidenav ol {
   padding-inline-start: 15px;
   margin: 8px 0;
 }
 
-.sidenav li {
+#sidenav li {
   list-style-type: none;
   padding: 5px;
 }
 
-.sidenav li a {
+#sidenav li a {
   text-decoration: none;
 }
 
-.sidenav span {
+#sidenav span {
   font-size: 18px;
 }
 
-.sidenav .sub-section {
+#sidenav .sub-section {
   font-weight: normal;
 }
 
+#sidenav-spacer {
+  flex: 0 0 auto;
+  width: 0;
+  transition: 0.5s;
+}
+
+#open {
+  cursor: pointer;
+  position: fixed;
+  top: 10;
+  left: 10;
+}
+
+#close {
+  cursor: pointer;
+  align-self: flex-end; 
+  margin: 10px;
+}
+
+.hide-sidebar {
+  width: 0 !important;
+}
+
 @media screen and (min-width: 960px) {
-  .sidenav {
+  #sidenav {
+    width: 320px;
+  }
+
+  #sidenav-spacer {
     width: 320px;
   }
 }
@@ -409,16 +434,6 @@ section.cta .manual > .content {
 
 .sticky {
   padding-top: 60px;
-}
-
-.article-container {
-  padding-bottom: 156px;
-}
-
-@media screen and (max-width: 959px) {
-  .article-container {
-    padding-bottom: 0;
-  }
 }
 
 code {
