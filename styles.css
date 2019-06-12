@@ -242,6 +242,12 @@ section.games {
   width: 100%;
 }
 
+@media screen and (max-width: 959px) {
+  section.games {
+    display:none;
+  }
+}
+
 section.games a {
   text-decoration: none;
 }
@@ -334,7 +340,7 @@ section.cta .manual > .content {
 #sidenav {
   flex: 0 0 auto;
   height: 100%;
-  width: 320px;
+  width: 100%;
   position: fixed;
   z-index: 999;
   top: 0;
@@ -384,15 +390,26 @@ section.cta .manual > .content {
   left: 10;
 }
 
-#close {
-  cursor: pointer;
-  align-self: flex-end; 
-  margin: 10px;
+@media screen and (min-width: 960px) {
+  #close {
+    opacity: 0;
+  }
+  .hide-sidebar {
+    
+  }
 }
 
-.hide-sidebar {
-  width: 0 !important;
+@media screen and (max-width: 959px) {
+  #close {
+    cursor: pointer;
+    align-self: flex-end; 
+    margin: 10px;
+  }
+  .hide-sidebar {
+    width: 0 !important;
+  }
 }
+
 
 @media screen and (min-width: 960px) {
   #sidenav {
