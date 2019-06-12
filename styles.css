@@ -30,7 +30,7 @@ canvas#webgl {
 article {
   background-color: #ffffff;
   max-width: 800px;
-  padding: 80px;
+  padding: 64px 32px 32px 64px;
   line-height: 1.5em;
 }
 
@@ -93,6 +93,7 @@ a {
   article {
     box-shadow: 10px 10px 40px 0 rgba(46, 52, 92, 0.25);
     margin: 5% 5%;
+    padding: 80px;
   }
 
   footer {
