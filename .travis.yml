@@ -8,7 +8,7 @@ haxe:
 
 install:
  - haxelib install json2object
- - haxelib git heaps https://github.com/HeapsIO/heaps.git
+ - haxelib install heaps
  - haxelib dev ogmo .
 
 script:
