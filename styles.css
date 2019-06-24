@@ -34,6 +34,11 @@ article {
   line-height: 1.5em;
 }
 
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
 article h1 {
   font-size: 24px;
   margin: 0 0 32px 0;
