@@ -104,7 +104,7 @@ class Main extends hxd.App {
           index: data[y][x]
         };
       }
-      drawGrid(level);
+      // drawGrid(level);
     }
   }
 
@@ -142,7 +142,7 @@ class Main extends hxd.App {
   }
 
   function drawGrid(level:Level) {
-    /*grid.clear();
+    grid.clear();
     grid.lineStyle(gridLineWidth, gridLineColor, gridLineAlpha);
 
     var layer = level.layers[0];
@@ -153,15 +153,15 @@ class Main extends hxd.App {
     for(x in 1...Std.int(level.width / layer.gridCellWidth)) {
       grid.moveTo(x * layer.gridCellWidth, 0);
       grid.lineTo(x * layer.gridCellWidth, level.height);
-    }*/
+    }
   }
 
   static function main() {
-    // 
     #if js
     var canvas : js.html.CanvasElement = cast js.Browser.document.getElementById("webgl");
     new NoInputWindow(canvas, false).setCurrent();
     #end
+    
     hxd.Res.initEmbed();
     new Main();
   }

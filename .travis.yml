@@ -4,12 +4,12 @@ dist: trusty
 language: haxe
 
 haxe:
- - "4.0.0-rc.2"
+ - "4.0.0-rc.5"
 
 install:
  - haxelib install json2object
  - haxelib install heaps
- - haxelib dev ogmo .
+ - haxelib install ogmo-3
 
 script:
  - haxe build.hxml

@@ -9,7 +9,7 @@ Once that is installed, get the following dependencies with `haxelib`:
 
 ```
 haxelib install heaps
-haxelib install ogmo
+haxelib install ogmo-3
 ```
 
 Then simply run this command to build the app:
