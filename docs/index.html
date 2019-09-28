@@ -20,7 +20,7 @@
                     <li>
                         <a href="#/manual/introduction.md">Introduction</a>
                         <ol class="sub-section">
-                            <li><a href="#">About OGMO Editor</a></li>
+                            <li><a href="#/manual/introduction.md##about-ogmo-editor">About OGMO Editor</a></li>
                         </ol>
                     </li>
                     <li>
@@ -108,8 +108,11 @@
             fetchAnchor(currentHash)
         });
         var url = '#/' + currentPage + (currentHash ? '#' + currentHash : '');
-        var fullUrl = window.location.origin + '/' + url;
+        var fullUrl = window.location.href;
+        console.log(url);
+        console.log(fullUrl);
         navLinks.forEach(function(link) {
+            console.log(link.href + ' == ' + fullUrl);
             link.className = link.href === fullUrl ? 'selected' : '';
         });
         history.replaceState('', document.title, url);

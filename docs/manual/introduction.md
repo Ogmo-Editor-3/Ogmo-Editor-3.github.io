@@ -8,7 +8,7 @@ OGMO Editor is a free, open source 2D level editor built by indie game developer
 
 OGMO Editor strives to be platform and engine agnostic, so it saves project files and level files as human readable and easy to implement JSON files. This makes it easy for developers to add OGMO Editor into their workflow.
 
-## About OGMO Editor
+## [About OGMO Editor](#about-ogmo-editor)
 
 OGMO Editor was originally built in Flash by Matt Thorson, creator of Towerfall. A second version was created as a native Windows application. OGMO Editor 3 was originally built in Typescript by Matt Thorson and Noel Berry, and was used in the creation of Celeste. The OGMO Editor logo and application icons were made by Kyle Pulver.
 

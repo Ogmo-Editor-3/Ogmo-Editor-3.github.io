@@ -27,6 +27,15 @@ canvas#webgl {
   width: 100%;
 }
 
+#manual #sidenav a {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+#manual #sidenav a.selected {
+  background-color: bisque;
+}
+
 article {
   background-color: #ffffff;
   max-width: 800px;
