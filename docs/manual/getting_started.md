@@ -1,4 +1,4 @@
-# Getting Started
+# [Getting Started](#getting-started)
 
 This Quickstart Guide will help you navigate Ogmo Editor 3 to create unique levels for your games!
 

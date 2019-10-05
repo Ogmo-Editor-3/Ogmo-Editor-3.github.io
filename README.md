@@ -18,9 +18,13 @@ Then simply run this command to build the app:
 haxe build.hxml
 ```
 
+### Editing the Manual
+
+The Ogmo Editor 3 Manual builds it content through the markdown files (.md) in the `docs` directory.
+
 ### Serving the Website for Development
 
-The Docs portion of the Website needs to be accessed through a webserver. If you dont have a preferred way to serve files, this repo comes with a simple Node server to use. With Node installed, open a terminal in the project and run:
+The Manual can only be accessed through a webserver. If you dont have a preferred way to serve files, this repo comes with a simple Node server to use. With [Node](https://nodejs.org/) installed, open a terminal in the project and run:
 
 ```
 npm i

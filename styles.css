@@ -38,6 +38,7 @@ canvas#webgl {
 
 article {
   background-color: #ffffff;
+  width: 100%;
   max-width: 800px;
   padding: 64px 32px 32px 64px;
   line-height: 1.5em;
@@ -49,16 +50,21 @@ article img {
 }
 
 article h1 {
-  font-size: 24px;
+  font-size: 32px;
   margin: 0 0 32px 0;
 }
 
 article h2 {
-  font-size: 20px;
+  font-size: 28px;
   margin: 32px 0;
 }
 
-article h2 a {
+article h3 {
+  font-size: 24px;
+  margin: 32px 0;
+}
+
+article h1 a, article h2 a {
   text-decoration: none;
 }
 
@@ -466,6 +472,16 @@ section.cta .manual > .content {
 
 .sticky {
   padding-top: 60px;
+}
+
+.inverted {
+  -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+  filter: invert(100%);
+}
+
+.down-eight {
+  position: relative;
+  top: 8;
 }
 
 code {

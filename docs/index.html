@@ -20,7 +20,7 @@
                     <li>
                         <a href="#/manual/introduction.md">Introduction</a>
                         <ol class="sub-section">
-                            <li><a href="#/manual/introduction.md##about-ogmo-editor">About OGMO Editor</a></li>
+                            <li><a href="#/manual/introduction.md#about-ogmo-editor">About OGMO Editor</a></li>
                         </ol>
                     </li>
                     <li>
@@ -37,10 +37,10 @@
                             <li><a href="#/manual/getting_started.md#wrapping-up">Wrapping Up</a></li>
                         </ol>
                     </li>
-                    <li><a href="#">Tile Layers</a></li>
-                    <li><a href="#">Grid Layers</a></li>
-                    <li><a href="#">Entity Layers</a></li>
-                    <li><a href="#">Decal Layers</a></li>
+                    <li><a href="#/manual/tile-layers.md">Tile Layers</a></li>
+                    <li><a href="#/manual/grid-layers.md">Grid Layers</a></li>
+                    <li><a href="#/manual/entity-layers.md">Entity Layers</a></li>
+                    <li><a href="#/manual/decal-layers.md">Decal Layers</a></li>
                 </ol>
             </li>
             <li>
@@ -56,10 +56,10 @@
                             <li><a href="#/reference/building.md#packaging">Packaging</a></li>
                         </ol>
                     </li>
-                    <li><a href="#">Contributing</a></li>
-                    <li><a href="#/reference/level-json.md">Level JSON Schema</a></li>
-                    <li><a href="#/reference/project-json.md">Project JSON Schema</a></li>
-                    <li><a href="#">Attributions</a></li>
+                    <li><a href="#/reference/contributing.md">Contributing</a></li>
+                    <!-- <li><a href="#/reference/level-json.md">Level JSON Schema</a></li> -->
+                    <!-- <li><a href="#/reference/project-json.md">Project JSON Schema</a></li> -->
+                    <!-- <li><a href="#/reference/attributions.md">Attributions</a></li> -->
                 </ol>
             </li>
         </ol>
@@ -74,6 +74,30 @@
 <script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/unfetch/dist/unfetch.umd.js"></script>
 <script>
+     // sidenav toggles
+     var open = document.getElementById('open');
+    var close = document.getElementById('close');
+    var sidenav = document.getElementById('sidenav');
+    var spacer = document.getElementById('sidenav-spacer');
+
+    open.onclick = () => 
+    {
+        sidenav.classList.remove('hide-sidebar');
+        spacer.classList.remove('hide-sidebar');
+    };
+    
+    close.onclick = () => 
+    {
+        sidenav.classList.add('hide-sidebar');
+        spacer.classList.add('hide-sidebar');
+    };
+
+    if (window.innerWidth < 960)
+    {
+        sidenav.classList.add('hide-sidebar');
+        spacer.classList.add('hide-sidebar');
+    }
+
     // marked TOC
     if (!window.Promise) {
         window.Promise = ES6Promise;
@@ -106,19 +130,19 @@
         }
         fetchPage(currentPage).then(function () {
             fetchAnchor(currentHash)
+            sidenav.classList.add('hide-sidebar');
+            spacer.classList.add('hide-sidebar');
         });
         var url = '#/' + currentPage + (currentHash ? '#' + currentHash : '');
         var fullUrl = window.location.href;
-        console.log(url);
-        console.log(fullUrl);
         navLinks.forEach(function(link) {
-            console.log(link.href + ' == ' + fullUrl);
-            link.className = link.href === fullUrl ? 'selected' : '';
+            link.className = link.href === fullUrl ? 'gradient' : '';
         });
         history.replaceState('', document.title, url);
     }
     function fetchAnchor(anchor) {
         if (!anchor) {
+            window.scrollTo(0, 0);
             return;
         }
         var hashElement = document.getElementById(anchor);
@@ -150,30 +174,7 @@
         e.preventDefault();
         hashChange();
     });
+
     hashChange();
-
-    // sidenav toggles
-    var open = document.getElementById('open');
-    var close = document.getElementById('close');
-    var sidenav = document.getElementById('sidenav');
-    var spacer = document.getElementById('sidenav-spacer');
-
-    open.onclick = () => 
-    {
-        sidenav.classList.remove('hide-sidebar');
-        spacer.classList.remove('hide-sidebar');
-    };
-    
-    close.onclick = () => 
-    {
-        sidenav.classList.add('hide-sidebar');
-        spacer.classList.add('hide-sidebar');
-    };
-
-    if (window.innerWidth < 960)
-    {
-        sidenav.classList.add('hide-sidebar');
-        spacer.classList.add('hide-sidebar');
-    }
 </script>
 </html>

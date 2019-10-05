@@ -15,44 +15,44 @@
 - [ ] **Tile Layers**
 	- [ ] Adding a Tileset
 	- [ ] Settings
-	- [ ] Tools
-    	- [ ] Pencil
-    	- [ ] Rectangle
-    	- [ ] Line
-    	- [ ] Fill
-    	- [ ] Eyedropper
-    	- [ ] Tile Selection
+	- [x] Tools
+    	- [x] Pencil
+    	- [x] Rectangle
+    	- [x] Line
+    	- [x] Fill
+    	- [x] Eyedropper
+    	- [x] Tile Selection
 
 - [ ] **Grid Layers**
 	- [ ] Settings
     	- [ ] Adding a grid type
-	- [ ] Tools
-    	- [ ] Pencil
-    	- [ ] Rectangle
-    	- [ ] Line
-    	- [ ] Fill
-    	- [ ] Eyedropper
-    	- [ ] Grid Selection
+	- [x] Tools
+    	- [x] Pencil
+    	- [x] Rectangle
+    	- [x] Line
+    	- [x] Fill
+    	- [x] Eyedropper
+    	- [x] Grid Selection
 
 - [ ] **Entity Layers**
     - [ ] Adding Entities
 	- [ ] Settings
     	- [ ] Using tags
-	- [ ] Tools
-    	- [ ] Entity Selection
-    	- [ ] Create
-    	- [ ] Resize
-    	- [ ] Rotate
-    	- [ ] Nodes
+	- [x] Tools
+    	- [x] Entity Selection
+    	- [x] Create
+    	- [x] Resize
+    	- [x] Rotate
+    	- [x] Nodes
 
 - [ ] **Decal Layers**
 	- [ ] Settings
     	- [ ] Adding image folder
-	- [ ] Tools
-    	- [ ] Decal Selection
-    	- [ ] Create
-    	- [ ] Resize
-    	- [ ] Rotate
+	- [x] Tools
+    	- [x] Decal Selection
+    	- [x] Create
+    	- [x] Resize
+    	- [x] Rotate
 
 # Reference
 

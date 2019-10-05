@@ -2,11 +2,13 @@
   <img  src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/logo-big.png" alt="OGMO Editor Logo">
 </p>
 
-# Introduction
+# [Introduction](#introduction)
 
 OGMO Editor is a free, open source 2D level editor built by indie game developers for indie game developers. OGMO Editor focuses on a fast, intuitive project-based workflow to make level design as efficient and as fun as possible. Build levels using tilesets, add functionality by placing entities, decorate the stage with decals, and leverage custom metadata to jumpstart content creation for your game!
 
 OGMO Editor strives to be platform and engine agnostic, so it saves project files and level files as human readable and easy to implement JSON files. This makes it easy for developers to add OGMO Editor into their workflow.
+
+NOTE: This manual is currently in progress, so certain information on existing features may not yet be present.
 
 ## [About OGMO Editor](#about-ogmo-editor)
 
