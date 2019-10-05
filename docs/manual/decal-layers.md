@@ -2,7 +2,7 @@
 
 ## Tools
 
-### Decal Select Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/selection.png" class="down-eight" width="32"/>
+### Decal Select Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/selection.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -38,7 +38,7 @@
 - Ctrl + D: Duplicate selected decal(s)
 - Alt: Switch to Decal Create Tool.
 
-### Decal Create Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/entity-create.png" class="down-eight" width="32"/>
+### Decal Create Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/entity-create.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 

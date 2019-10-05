@@ -2,7 +2,7 @@
 
 ## Tools
 
-### Entity Select Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/selection.png" class="down-eight" width="32"/>
+### Entity Select Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/selection.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -27,7 +27,7 @@
 
 - Alt: Switch to Entity Resize Tool.
 
-### Entity Create Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/entity-create.png" class="down-eight" width="32"/>
+### Entity Create Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/entity-create.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -49,19 +49,19 @@
 
 - Preview entity at mouse position
 
-### Entity Resize Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/entity-scale.png" class="down-eight" width="32"/>
+### Entity Resize Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/entity-scale.png" class="down-eight" width="32"/>
 
 **Left Mouse Down + Drag**
 
 - Resize selected entities (if entities are resizable).
 
-### Entity Rotation Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/entity-rotate.png" class="down-eight" width="32"/>
+### Entity Rotation Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/entity-rotate.png" class="down-eight" width="32"/>
 
 **Left Mouse Down + Drag**
 
 - Rotate selected entities (if entities are rotatable).
 
-### Entity Node Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/entity-nodes.png" class="down-eight" width="32"/>
+### Entity Node Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/entity-nodes.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 

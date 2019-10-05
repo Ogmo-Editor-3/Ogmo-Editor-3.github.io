@@ -1,5 +1,5 @@
 <p align="center">
-  <img  src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/logo-big.png" alt="OGMO Editor Logo">
+  <img  src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/logo-big.png" alt="OGMO Editor Logo">
 </p>
 
 # [Introduction](#introduction)

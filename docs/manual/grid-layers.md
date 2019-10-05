@@ -2,11 +2,11 @@
 
 ## Tools
 
-### Grid Selection Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/selection.png" class="down-eight" width="32"/>
+### Grid Selection Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/selection.png" class="down-eight" width="32"/>
 
 **WIP**
 
-### Grid Rectangle Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/square.png" class="down-eight" width="32"/>
+### Grid Rectangle Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/square.png" class="down-eight" width="32"/>
 
 **Left Mouse Down + Drag**
 
@@ -18,7 +18,7 @@
 - Preview right brush rectangle.
   + Right Mouse Up: Apply rectangle.
 
-### Grid Pencil Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/pencil.png" class="down-eight" width="32"/>
+### Grid Pencil Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/pencil.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -36,7 +36,7 @@
 - Alt: Switch to Grid Eyedropper Tool.
 - Shift: Switch to Grid Rectangle Tool.
 
-### Grid Line Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/line.png" class="down-eight" width="32"/>
+### Grid Line Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/line.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -48,7 +48,7 @@
 - Begin drawing a line with the right brush.
   + Right Mouse Up: Stop drawing.
 
-### Grid Fill Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/floodfill.png" class="down-eight" width="32"/>
+### Grid Fill Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/floodfill.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -63,7 +63,7 @@
 - Alt: Switch to Grid Eyedropper Tool.
 - Shift: Switch to Grid Rectangle Tool.
 
-### Grid Eyedropper Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icons/eyedropper.png" class="down-eight" width="32"/>
+### Grid Eyedropper Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icons/eyedropper.png" class="down-eight" width="32"/>
 
 **Left Mouse Down**
 

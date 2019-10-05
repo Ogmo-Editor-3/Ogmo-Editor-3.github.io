@@ -2,7 +2,7 @@
 
 ## Tools
 
-### Tile Pencil Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icon-pencil.png" class="inverted down-eight" width="32"/>
+### Tile Pencil Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icon-pencil.png" class="inverted down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -20,7 +20,7 @@
 - Alt: Switch to Tile Eyedropper Tool.
 - Shift: Switch to Tile Rectangle Tool.
 
-### Tile Rectangle Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icon-square.png" class="inverted down-eight" width="32"/>
+### Tile Rectangle Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icon-square.png" class="inverted down-eight" width="32"/>
 
 **Left Mouse Down + Drag**
 
@@ -38,7 +38,7 @@
 - Alt: Switch to Tile Eyedropper Tool.
 - Shift: Switch to Tile Pencil Tool.
 
-### Tile Line Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icon-line.png" class="inverted down-eight" width="32"/>
+### Tile Line Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icon-line.png" class="inverted down-eight" width="32"/>
 
 **Left Mouse Down + Drag**
 
@@ -56,7 +56,7 @@
 - Alt: Switch to Tile Eyedropper Tool.
 - Shift: Switch to Tile Pencil Tool.
 
-### Tile Fill Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icon-floodfill.png" class="inverted down-eight" width="32"/>
+### Tile Fill Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icon-floodfill.png" class="inverted down-eight" width="32"/>
 
 **Left Mouse Down**
 
@@ -77,7 +77,7 @@
 - Alt: Switch to Tile Eyedropper Tool.
 - Shift: Switch to Tile Pencil Tool.
 
-### Tile Eyedropper Tool - <img src="https://raw.githubusercontent.com/AustinEast/ogmo-site/gh-pages/img/icon-eyedropper.png" class="inverted down-eight" width="32"/>
+### Tile Eyedropper Tool - <img src="https://raw.githubusercontent.com/Ogmo-Editor-3/ogmo-editor-3.github.io/gh-pages/img/icon-eyedropper.png" class="inverted down-eight" width="32"/>
 
 **Left Mouse Down + Drag**
 
