@@ -2,7 +2,7 @@
 
 This Quickstart Guide will help you navigate Ogmo Editor 3 to create unique levels for your games!
 
-First, download OGMO Editor 3 [here]().
+First, download OGMO Editor 3 [here](https://ogmoeditor.itch.io/editor).
 
 ## [Starting a New Project](#starting-a-new-project)
 
