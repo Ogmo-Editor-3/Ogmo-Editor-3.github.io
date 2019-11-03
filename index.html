@@ -87,7 +87,7 @@
 		</p>
 	</footer>
 </body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Ogmo-Editor-3/ogmo-editor-3.github.io@gh-pages/app.js"></script>
+<script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="scripts/smoothscroll.min.js"></script>
 <script>
 	// Resize the canvas on window resize
@@ -117,15 +117,13 @@
 	// Scrape itch.io
 
 	var restricted_projects = [
-		'Hammstein',
-		'Meow Moves',
-		'Foos Fight'
+		'OGMO Editor',
 	]
 
 	function getGames()
 	{
 		var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-		var target_site = 'https://rvagamejams.itch.io';
+		var target_site = 'https://ogmoeditor.itch.io/';
 		fetch(cors_api_url + target_site, {mode: 'cors'})
 			.then(res => res.text())
 			.then(html => parseResponse(new DOMParser().parseFromString(html, "text/html")));
