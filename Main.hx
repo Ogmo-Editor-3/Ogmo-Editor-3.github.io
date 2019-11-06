@@ -33,7 +33,8 @@ class Main extends hxd.App {
 
     levels = [
       Level.create(hxd.Res.map1.entry.getText()),
-      Level.create(hxd.Res.map2.entry.getText())
+      Level.create(hxd.Res.map2.entry.getText()),
+      Level.create(hxd.Res.map3.entry.getText())
     ];
 
     tileImage = hxd.Res.tiles.toTile();
