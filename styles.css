@@ -91,6 +91,10 @@ a {
   color: unset;
 }
 
+section {
+  margin-top: 48px;
+}
+
 @media screen and (min-width: 960px) {
 
   body {
@@ -225,6 +229,12 @@ a {
   transition-duration: 500ms;
 }
 
+/* screenshot component */
+
+section.screenshot img {
+  max-width: 100%;
+}
+
 /* feature component */
 
 section.feature {
@@ -234,6 +244,18 @@ section.feature {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+
+section.feature1 {
+  background-image: url('img/feature1.png');
+}
+
+section.feature2 {
+  background-image: url('img/feature2.png');
+}
+
+section.feature3 {
+  background-image: url('img/feature3.png');
 }
 
 section.feature:nth-child(even) {
