@@ -88,7 +88,7 @@ class Main extends hxd.App {
       {
         var i = (y * level.layers[0].gridCellsX)  + x;
         if (tileData[i] != null) {
-          if (tileData[i].index > -1) tileData[i].lastIndex = tileData[i].index;
+          tileData[i].lastIndex = tileData[i].index > -1 ? tileData[i].index : null;
           tileData[i].x = x * tileWidth;
           tileData[i].y = y * tileHeight;
           tileData[i].delay = (y + x) * (transitionDelay + Math.random() * 0.01);
