@@ -378,6 +378,43 @@ section.cta .manual > .content {
   }
 }
 
+/* Social */
+
+section.social h1 {
+  text-align: center;
+}
+
+section.social .social-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.social .flex1 {
+  flex: 1;
+}
+
+section.social .social-link {
+  text-align: center;
+}
+
+section.social .flex2 {
+  flex: 2;
+}
+
+section.social img {
+  width: 48px;
+}
+
+@media screen and (max-width: 959px) {
+  section.social img {
+    width: 24px;
+  }
+
+  section.social {
+    margin-bottom: 32px;
+  }
+}
+
 /* side nav */
 
 #sidenav {
