@@ -1,5 +1,7 @@
 # ogmo-site
 
+[![Build Status](https://travis-ci.org/Ogmo-Editor-3/Ogmo-Editor-3.github.io.svg?branch=master)](https://travis-ci.org/Ogmo-Editor-3/Ogmo-Editor-3.github.io)
+
 ## Getting Started
 
 ### Building the Tilemap Preview
