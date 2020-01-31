@@ -1,0 +1,190 @@
+<!DOCTYPE>
+<html>
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152736321-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-152736321-1');
+    </script>
+        
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogmo Editor Manual">
+    <meta name="keywords" content="Ogmo,Editor,Indie,gamedev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ogmo Editor 3 - Manual</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="manual">
+    <div id="sidenav" class="shadow hide-sidebar">
+        <img id="close" src="../img/icons-cross.png" />
+        <a href="../"><img src="../img/logo-navbar.png" /></a>
+        <ol id="nav" style="margin-top:64px">
+            <li>
+                <span>Manual</span>
+                <ol>
+                    <li>
+                        <a href="#/manual/introduction.md">Introduction</a>
+                        <ol class="sub-section">
+                            <li><a href="#/manual/introduction.md#about-ogmo-editor">About OGMO Editor</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#/manual/getting_started.md">Getting Started</a>
+                        <ol class="sub-section">
+                            <li><a href="#/manual/getting_started.md#starting-a-new-project">Starting a New Project</a></li>
+                            <li><a href="#/manual/getting_started.md#project-settings">Project Settings</a></li>
+                            <li><a href="#/manual/getting_started.md#adding-layers">Adding Layers</a></li>
+                            <li><a href="#/manual/getting_started.md#adding-entities">Adding Entities</a></li>
+                            <li><a href="#/manual/getting_started.md#adding-tilesets">Adding Tilesets</a></li>
+                            <li><a href="#/manual/getting_started.md#saving-a-project">Saving a Project</a></li>
+                            <li><a href="#/manual/getting_started.md#using-the-editor">Using the Editor</a></li>
+                            <li><a href="#/manual/getting_started.md#saving-levels">Saving Levels</a></li>
+                            <li><a href="#/manual/getting_started.md#wrapping-up">Wrapping Up</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#/manual/tile-layers.md">Tile Layers</a></li>
+                    <li><a href="#/manual/grid-layers.md">Grid Layers</a></li>
+                    <li><a href="#/manual/entity-layers.md">Entity Layers</a></li>
+                    <li><a href="#/manual/decal-layers.md">Decal Layers</a></li>
+                </ol>
+            </li>
+            <li>
+                <span>Reference</span>
+                <ol>
+                    <li>
+                        <a href="#/reference/building.md">Building from Source</a>
+                        <ol class="sub-section">
+                            <li><a href="#/reference/building.md#preparing-node">Preparing Node</a></li>
+                            <li><a href="#/reference/building.md#preparing-haxe">Preparing Haxe</a></li>
+                            <li><a href="#/reference/building.md#building">Building</a></li>
+                            <li><a href="#/reference/building.md#development">Development</a></li>
+                            <li><a href="#/reference/building.md#packaging">Packaging</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#/reference/project-customization.md">Project Customization</a></li>
+                    <li><a href="#/reference/contributing.md">Contributing</a></li>
+                    <!-- <li><a href="#/reference/level-json.md">Level JSON Schema</a></li> -->
+                    <!-- <li><a href="#/reference/project-json.md">Project JSON Schema</a></li> -->
+                    <!-- <li><a href="#/reference/attributions.md">Attributions</a></li> -->
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div id="sidenav-spacer"></div>
+    <img id="open" src="../img/icons-hamburger.png" />
+    <main class="icon-bg">
+        <article id="content"></article>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/unfetch/dist/unfetch.umd.js"></script>
+<script>
+     // sidenav toggles
+    var open = document.getElementById('open');
+    var close = document.getElementById('close');
+    var sidenav = document.getElementById('sidenav');
+    var spacer = document.getElementById('sidenav-spacer');
+
+    open.onclick = () => 
+    {
+        sidenav.classList.remove('hide-sidebar');
+        spacer.classList.remove('hide-sidebar');
+    };
+    
+    close.onclick = () => 
+    {
+        sidenav.classList.add('hide-sidebar');
+        spacer.classList.add('hide-sidebar');
+    };
+
+    if (window.innerWidth < 960)
+    {
+        sidenav.classList.add('hide-sidebar');
+        spacer.classList.add('hide-sidebar');
+    }
+
+    // marked TOC
+    if (!window.Promise) {
+        window.Promise = ES6Promise;
+    }
+    if (!window.fetch) {
+        window.fetch = unfetch;
+    }
+    var content = document.querySelector('#content');
+    var body = document.querySelector('html');
+    var navLinks = document.querySelectorAll('#nav a');
+    var currentPage = 'manual/introduction.md';
+    var currentHash = '';
+    var renderedPage = '';
+
+    function hashChange() {
+        var hash = location.hash.slice(1);
+        if (!hash) {
+            hash = 'manual/introduction.md';
+        }
+        var uri = hash.split('#');
+        if (uri[0].match(/^\//)) {
+            currentPage = uri[0].slice(1);
+            if (uri.length > 1) {
+                currentHash = uri[1];
+            } else {
+                currentHash = '';
+            }
+        } else {
+            currentHash = uri[0];
+        }
+        fetchPage(currentPage).then(function () {
+            fetchAnchor(currentHash)
+            sidenav.classList.add('hide-sidebar');
+            spacer.classList.add('hide-sidebar');
+        });
+        var url = '#/' + currentPage + (currentHash ? '#' + currentHash : '');
+        var fullUrl = window.location.href;
+        navLinks.forEach(function(link) {
+            link.className = link.href === fullUrl ? 'gradient' : '';
+        });
+        history.replaceState('', document.title, url);
+    }
+    function fetchAnchor(anchor) {
+        if (!anchor) {
+            window.scrollTo(0, 0);
+            return;
+        }
+        var hashElement = document.getElementById(anchor);
+        if (hashElement) {
+            hashElement.scrollIntoView();
+        }
+    }
+    function fetchPage(page) {
+        if (page === renderedPage) {
+            return Promise.resolve();
+        }
+        return fetch(page)
+            .then(function (res) {
+                if (!res.ok) {
+                    throw new Error('Error ' + res.status + ': ' + res.statusText);
+                }
+                return res.text();
+            })
+            .then(function (text) {
+                renderedPage = page;
+                content.innerHTML = marked(text);
+                body.scrollTop = 0;
+            }).catch(function (e) {
+                content.innerHTML = '<p>Oops! There was a problem rendering the page.</p>'
+                    + '<p>' + e.message + '</p>';
+            });
+    }
+    window.addEventListener('hashchange', function (e) {
+        e.preventDefault();
+        hashChange();
+    });
+
+    hashChange();
+</script>
+</html>

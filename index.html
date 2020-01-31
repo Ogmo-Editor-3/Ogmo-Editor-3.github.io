@@ -1,0 +1,225 @@
+<!DOCTYPE>
+<html>
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-152736321-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	
+		gtag('config', 'UA-152736321-1');
+	</script>
+
+	<!-- Primary Meta Tags -->
+	<title>Ogmo Editor 3</title>
+	<meta name="title" content="Ogmo Editor 3">
+	<meta name="description" content="A free, open source, project oriented level editor made for indie game developers by indie game developers.">
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Ogmo,Editor,Indie,gamedev">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://ogmo-editor-3.github.io/">
+	<meta property="og:title" content="Ogmo Editor 3">
+	<meta property="og:description" content="A free, open source, project oriented level editor made for indie game developers by indie game developers.">
+	<meta property="og:image" content="https://raw.githubusercontent.com/Ogmo-Editor-3/Ogmo-Editor-3.github.io/master/img/cover.png">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://ogmo-editor-3.github.io/">
+	<meta property="twitter:title" content="Ogmo Editor 3">
+	<meta property="twitter:description" content="A free, open source, project oriented level editor made for indie game developers by indie game developers.">
+	<meta property="twitter:image" content="https://raw.githubusercontent.com/Ogmo-Editor-3/Ogmo-Editor-3.github.io/master/img/cover.png">
+	
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body id="home">
+	<div id="hero">
+		<div class="title icon-bg">
+			<img src="img/logo-big.png" />
+		</div>
+		<div class="content">
+			<p>OGMO Editor is a free, open source, project oriented level editor made for indie game developers by indie game developers.</p>
+			<div>
+				<a href="#" class="btn border hide-mobile" onclick="scrollToContent()">Get Started</a>
+				<a href="https://ogmoeditor.itch.io/editor" class="btn gradient">Download<span id="version" class="hide-mobile">v3.3</span></a>
+			</div>
+		</div>
+	</div>
+	<canvas id="webgl"></canvas>
+	<nav id="navbar" class="shadow hide-mobile">
+		<a href="#"><img src="img/logo-navbar.png" /></a>
+		<div>
+			<a href="docs/#/manual/introduction.md" class="btn">Manual</a>
+			<a href="https://ogmoeditor.itch.io/editor" class="btn gradient">Download</a>
+		</div>
+	</nav>
+	<main>
+		<section class="screenshot">
+			<a href='img/screenshot.png'><img src='img/screenshot.png' /></a>
+		</section>
+		<section class="feature feature1">
+			<div>
+				<h1>Project Based Workflow</h1>
+				<p>Every feature of OGMO Editor contributes to an intuitive, holistic, project based workflow. Project data flows down to all of your level files, which are easily accessible from the main window!</p>
+			</div>
+		</section>
+		<section class="feature feature2">
+			<div>
+				<h1>Powerful Layer Types</h1>
+				<p>Beyond using Tile Layers to create levels from a tileset, use Decal Layers to freely place, scale, and rotate images to decorate your level, Entity Layers to place complex objects in your game, and Grid Layers to creatively add metadata to your level!</p>
+			</div>
+		</section>
+		<section class="feature feature3">
+			<div>
+				<h1>Easy Integration</h1>
+				<p>When you're done editing, save your level to a handy JSON file - one that is easily parsed to give you immediate access to all of the tiles, decals, and entities you've authored!</p>
+			</div>
+		</section>
+		<section class="games hidden">
+			<h1>Games created using OGMO Editor</h1>
+			<div>
+				<div class="game"><div class="cover"></div><a><p class="title"></p></a><p class="author"></p></div>
+				<div class="game"><div class="cover"></div><a><p class="title"></p></a><p class="author"></p></div>
+				<div class="game"><div class="cover"></div><a><p class="title"></p></a><p class="author"></p></div>
+			</div>
+		</section>
+		<section class="cta">
+			<div class="download gradient">
+				<h1>Download OGMO Editor</h1>
+				<p>OGMO Editor is free to use for personal and commercial projects - no strings attached - forever!</p><p>OGMO Editor is also open sourced using the very permissive MIT license!</p><br/>
+				<a href="https://ogmoeditor.itch.io/editor" class="btn border">Download at itch.io</a>
+				<img style="margin: 16px 0" src="img/targets.png" />
+				<a href="https://github.com/ogmo-editor-3" style="text-align:center;">Source available on GitHub</a>
+			</div>
+			<div class="manual icon-bg">
+				<div class="content">
+					<img src="img/icon-book.png" />
+					<h1>Online Manual</h1>
+					<p>Get the most out of OGMO Editor by learning its workflow in and out!</p><p>The online manual covers every aspect of OGMO Editor in detail.</p><br/>
+					<a href="docs/#/manual/introduction.md" class="btn gradient">Learn More</a>
+				</div>
+			</div>
+		</section>
+		<section class="social">
+			<h1>Connect with us!</h1>
+			<div class="social-container">
+				<div class="flex2"></div>
+				<div class="flex1 social-link"><a href="https://discord.gg/X3vcQwq"><img src='img/social_discord.svg' /></a></div>
+				<div class="flex1 social-link"><a href="https://ogmoeditor.itch.io/"><img src='img/social_itch.svg' /></a></div>
+				<div class="flex1 social-link"><a href="https://github.com/Ogmo-Editor-3"><img src='img/social_github.svg' /></a></div>
+				<div class="flex2"></div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>OGMO Editor created by Matt Thorson and friends</p>
+		<p class="hide-mobile">
+			<a href="docs/"><img class="footer-icon" src="img/icon-pencil.png" /></a>
+			<a href="docs/"><img class="footer-icon" src="img/icon-square.png" /></a>
+			<a href="docs/"><img class="footer-icon" src="img/icon-line.png" /></a>
+			<a href="docs/"><img class="footer-icon" src="img/icon-floodfill.png" /></a>
+			<a href="docs/"><img class="footer-icon" src="img/icon-eyedropper.png" /></a>
+			<a href="docs/"><img class="footer-icon" src="img/icon-selection.png" /></a>
+		</p>
+	</footer>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Ogmo-Editor-3/ogmo-editor-3.github.io@gh-pages/app.js"></script>
+<script type="text/javascript" src="scripts/smoothscroll.min.js"></script>
+<script>
+	// Resize the canvas on window resize
+	var canvas = document.getElementById('webgl');
+	canvas.style.width = '100%';
+	canvas.style.height = '100%';
+	window.addEventListener('resize', () => canvas.style.width = '100%', false);
+
+	// Show navbar on scroll
+	window.onscroll = () => scrollCheck();
+	function scrollCheck()
+	{
+		document.body.scrollTop > window.innerHeight - 64 ? document.getElementById("navbar").className = "shadow shownav hide-mobile" : document.getElementById("navbar").className = "shadow hide-mobile";
+	}
+
+	function scrollToContent()
+	{
+		setTimeout(function () {
+			if (document.documentElement.scrollIntoView) window.scrollTo({
+				top: window.innerHeight,
+				behavior: "smooth"
+			});
+			else window.scrollTo(0, window.innerHeight);
+		},2);
+	}
+
+	// Scrape itch.io
+
+	var restricted_projects = [
+		'OGMO Editor',
+	]
+
+	function getGames()
+	{
+		var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+		var target_site = 'https://ogmoeditor.itch.io/';
+		fetch(cors_api_url + target_site, {mode: 'cors'})
+			.then(res => res.text())
+			.then(html => parseResponse(new DOMParser().parseFromString(html, "text/html")));
+	}
+
+	function parseResponse(response)
+	{
+		var game_list = response.getElementsByClassName('has_cover');
+		if (game_list.length < 3) return;
+		var games_data = [];
+		for (let i = 0; i < game_list.length; i++) {
+			var game = {
+				title: game_list[i].getElementsByClassName('title')[0].innerHTML,
+				author: game_list[i].getElementsByClassName('game_author')[0].innerHTML,
+				image: game_list[i].getElementsByClassName('game_thumb')[0].attributes['data-background_image'].value,
+				href: game_list[i].getElementsByTagName('a')[0].attributes['href'].value
+			};
+			if (restricted_projects.indexOf(game.title) == -1) games_data.push(game);
+			//else console.log(game.title, 'not added');
+		}
+		shuffle(games_data);
+		injectGames(games_data);
+	}
+
+	function injectGames(games_data)
+	{
+		// document.getElementsByClassName('games')[0].className = 'games';
+		var game_divs = document.getElementsByClassName('game');
+		for (let i = 0; i < 3; i++)
+		{
+			var div = game_divs[i];
+			div.getElementsByClassName('cover')[0].style.backgroundImage = "url('" + games_data[i].image + "')";
+			div.getElementsByClassName('cover')[0].onclick = () => window.location.href = games_data[i].href;
+			div.getElementsByClassName('title')[0].innerHTML = games_data[i].title;
+			div.getElementsByClassName('author')[0].innerHTML = games_data[i].author;
+			div.getElementsByTagName('a')[0].setAttribute('href', games_data[i].href);
+		}
+	}
+
+	function shuffle(arr)
+	{
+		var currentIndex = arr.length;
+		var temporaryValue, randomIndex;
+	
+		while (0 !== currentIndex)
+		{
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+	
+			temporaryValue = arr[currentIndex];
+			arr[currentIndex] = arr[randomIndex];
+			arr[randomIndex] = temporaryValue;
+		}
+	
+		return arr;
+	}
+
+	getGames();
+</script>
+</html>

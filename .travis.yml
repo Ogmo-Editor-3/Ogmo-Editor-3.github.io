@@ -1,0 +1,23 @@
+sudo: required
+dist: trusty
+
+language: haxe
+
+haxe:
+ - "4.0.0-rc.5"
+
+install:
+ - haxelib install json2object
+ - haxelib install heaps
+ - haxelib install ogmo-3
+
+script:
+ - haxe build.hxml
+ - bash ./remove_gitignore.sh
+
+deploy:
+ - provider: pages
+   skip-cleanup: true
+   github-token: $GITHUB_TOKEN
+   on:
+    branch: master

@@ -1,0 +1,37 @@
+{
+  "name": "Ogmo Hero",
+  "levelPaths": ["."],
+  "backgroundColor": "#282c34ff",
+  "gridColor": "#3c4049cc",
+  "anglesRadians": true,
+  "directoryDepth": 5,
+  "levelDefaultSize": {"x": 320, "y": 240},
+  "levelMinSize": {"x": 128, "y": 128},
+  "levelMaxSize": {"x": 4096, "y": 4096},
+  "levelValues": [],
+  "defaultExportMode": ".json",
+  "entityTags": [],
+  "layers": [
+    {
+      "definition": "tile",
+      "name": "tiles",
+      "gridSize": {"x": 16, "y": 16},
+      "exportID": "37713875",
+      "exportMode": 0,
+      "arrayMode": 1,
+      "defaultTileset": "tileset"
+    }
+  ],
+  "entities": [],
+  "tilesets": [
+    {
+      "label": "tileset",
+      "path": "tiles.png",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAQCAYAAABQrvyxAAAA0klEQVRIie2WsQ3CQAxFvxErpM0ckCFoaNkgRZqMQXMFG6SlYQjIHLQMYQpkdEIhOTuOEiRedZLvR//7ThcTnGBm1uwnIvLQrzWibzAzb06VWiMmmJkP1d2kp+Gtwx/SmhfaMgAAtOaFJuRYmZQL4h9gbtwDPI5XU024XfaqmnuArC5MNWG7O6tqk12huNspnbfi8h/oIquLt/GUznchV6bvVCYLANiNAy/zYjxef7LYVyg23HcCiw2Qys8HGD0LAbZ5qC0DxgxzTcjhMswJc43TT41YW2hYoMJ/AAAAAElFTkSuQmCC",
+      "tileWidth": 16,
+      "tileHeight": 16,
+      "tileSeparationX": 0,
+      "tileSeparationY": 0
+    }
+  ]
+}
