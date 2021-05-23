@@ -12,6 +12,6 @@ NOTE: This manual is currently in progress, so certain information on existing f
 
 ## [About OGMO Editor](#about-ogmo-editor)
 
-OGMO Editor was originally built in Flash by Matt Thorson, creator of Towerfall. A second version was created as a native Windows application. OGMO Editor 3 was originally built in Typescript by Matt Thorson and Noel Berry, and was used in the creation of Celeste. The OGMO Editor logo and application icons were made by Kyle Pulver.
+OGMO Editor was originally built in Flash by Maddy Thorson, creator of Towerfall. A second version was created as a native Windows application. OGMO Editor 3 was originally built in Typescript by Maddy Thorson and Noel Berry, and was used in the creation of Celeste. The OGMO Editor logo and application icons were made by Kyle Pulver.
 
 This community edition of OGMO Editor 3 was translated into Haxe and extended by Caleb Cornett, Will Blanton, and Austin East.
