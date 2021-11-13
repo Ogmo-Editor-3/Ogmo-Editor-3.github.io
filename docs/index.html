@@ -173,7 +173,7 @@
             })
             .then(function (text) {
                 renderedPage = page;
-                content.innerHTML = marked(text);
+                content.innerHTML = marked.parse(text);
                 body.scrollTop = 0;
             }).catch(function (e) {
                 content.innerHTML = '<p>Oops! There was a problem rendering the page.</p>'
